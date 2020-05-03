@@ -13,4 +13,4 @@ of a `timeout` invocation that'll cause a `SIGQUIT` to be raised if `hangme` tak
 If this doesn't `SIGQUIT` after (say) 10 minutes, perhaps the bug is not being triggered or has been fixed.
 
 Commenting out the `import` of `plugin` seems to work around the problem. Perhaps there's some strange interaction between whatever (pre-`main()`) initialization code is run by `plugin` and the
-"new" timer code switched on around 2019-04-11 via commit 6becb033341602f2df9d7c55cc23e64b925bbee2 in the Golang source tree and/or the `os/exec` `Command.Start()` receiver.
+"new" timer code switched on around 2019-04-11 via commit `6becb033341602f2df9d7c55cc23e64b925bbee2` in the Golang source tree and/or the `os/exec` `Command.Start()` receiver.
